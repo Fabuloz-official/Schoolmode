@@ -4,28 +4,14 @@ const http = require('http');
 //  📰 TES NEWS — édite cette section pour mettre à jour les news
 // =====================================================================
 const NEWS = [
-  {
+    {
     id: 1,
     category: 'update',   // "update" | "tip" | "alert"
     title: 'School Mode v5.3 released!',
-    content: 'New profile system, schedule support and auto-translation for 35+ languages. Update now!',
+    content: 'Auto translation is now working and the new news système is now in opperation',
     date: '2025-03-27'
-  },
-  {
-    id: 2,
-    category: 'tip',
-    title: 'Productivity tip',
-    content: 'Use the Pomodoro technique: 25 minutes of focused work, then a 5-minute break. School Mode helps you stay on track!',
-    date: '2025-03-25'
-  },
-  {
-    id: 3,
-    category: 'alert',
-    title: 'Maintenance scheduled',
-    content: 'Brief downtime expected on April 1st between 2:00 AM and 4:00 AM CET. Your profiles are safe.',
-    date: '2025-03-24'
   }
-];
+  ];
 
 // =====================================================================
 //  Serveur

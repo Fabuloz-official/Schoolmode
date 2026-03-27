@@ -6,13 +6,6 @@ const http = require('http');
 const NEWS = [
     {
     id: 1,
-    category: 'tip',   // "update" | "tip" | "alert"
-    title: 'test',
-    content: 'test',
-    date: '2025-03-27'
-    },
-    {
-    id: 1,
     category: 'update',   // "update" | "tip" | "alert"
     title: 'School Mode v5.3 released!',
     content: 'Auto translation is now working and the new news système is now in opperation !',

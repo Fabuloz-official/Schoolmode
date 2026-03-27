@@ -1,0 +1,12 @@
+{
+  "name": "school-mode-news-server",
+  "version": "5.3.0",
+  "description": "News server for School Mode browser extension",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

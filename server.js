@@ -4,13 +4,6 @@ const http = require('http');
 //  📰 TES NEWS — édite cette section pour mettre à jour les news
 // =====================================================================
 const NEWS = [
-    {
-    id: 1,
-    category: 'tip',   // "update" | "tip" | "alert"
-    title: 'School Mode v5.3 released!',
-    content: 'test',
-    date: '2025-03-28'
-  },
      {
     id: 1,
     category: 'update',   // "update" | "tip" | "alert"

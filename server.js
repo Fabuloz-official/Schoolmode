@@ -8,7 +8,7 @@ const NEWS = [
     id: 1,
     category: 'update',   // "update" | "tip" | "alert"
     title: 'School Mode v5.3 released!',
-    content: 'Auto translation is now working and the new news système is now in opperation .',
+    content: 'Auto translation is now working and the new news système is now in opperation !',
     date: '2025-03-27'
   }
   ];

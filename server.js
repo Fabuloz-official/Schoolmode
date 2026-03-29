@@ -25,7 +25,7 @@ const NEWS = [
       '• Service Worker timers lost on suspension → migrated to chrome.alarms',
       '• Blocked tabs not reloaded on disable → auto-reload after 500ms',
       '',
-      '⚠️ Migration note — Existing profiles without a theme will default to purple.'
+      '⚠️ Migration note — Existing profiles without a theme will default to purple!'
     ].join('\n'),
     date: '2025-03-29'
   }

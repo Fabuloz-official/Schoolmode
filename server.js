@@ -1,51 +1,48 @@
 const http = require('http');
 
 // =====================================================================
-//  📰 TES NEWS — édite cette section pour mettre à jour les news
+//  📰 NEWS — edit this section to update news
 // =====================================================================
 const NEWS = [
-     {
+  {
     id: 1,
-    category: 'School Mode v5.3.0 — Release Notes',   // "update" | "tip" | "alert"
+    category: 'update',
     title: 'School Mode v5.3 released!',
-    content: '✨ What's New
-
-8 profile themes — Purple, Forest, Sunset, Ocean, Cherry, Midnight, Candy, Arctic
-News feed — Built-in news client with local cache fallback
-Import / Export — Floating button with profile preview before import
-Changelog modal — "What's new" button directly in options
-
-🛠 Improvements
-
-Unsaved changes bar with Cancel / Save actions
-Real-time site counter in options
-Cleaner auto-disable: removes all DNR rules + unmutes and reloads blocked tabs
-debounce on inputs to prevent unnecessary saves
-
-🐛 Bug Fixes
-
-Service Worker timers lost on suspension → migrated to chrome.alarms
-Blocked tabs not reloaded on disable → auto-reload after 500ms
-
-
-
-⚠️ Migration note — Existing profiles without a theme will default to purple.',
+    content: [
+      '✨ What\'s New',
+      '• 8 profile themes — Purple, Forest, Sunset, Ocean, Cherry, Midnight, Candy, Arctic',
+      '• News feed — Built-in news client with local cache fallback',
+      '• Import / Export — Floating button with profile preview before import',
+      '• Changelog modal — "What\'s new" button directly in options',
+      '',
+      '🛠 Improvements',
+      '• Unsaved changes bar with Cancel / Save actions',
+      '• Real-time site counter in options',
+      '• Cleaner auto-disable: removes all DNR rules + unmutes and reloads blocked tabs',
+      '• debounce on inputs to prevent unnecessary saves',
+      '',
+      '🐛 Bug Fixes',
+      '• Service Worker timers lost on suspension → migrated to chrome.alarms',
+      '• Blocked tabs not reloaded on disable → auto-reload after 500ms',
+      '',
+      '⚠️ Migration note — Existing profiles without a theme will default to purple.'
+    ].join('\n'),
     date: '2025-03-29'
   }
-  ];
+];
 
 // =====================================================================
-//  Serveur
+//  Server
 // =====================================================================
 const PORT = process.env.PORT || 25565;
 
-// Rate limiting simple (par IP, en mémoire)
+// Simple in-memory rate limiting (per IP)
 const rateLimitMap = new Map();
 const RATE_LIMIT_MAX    = 20;
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
 
 function isRateLimited(ip) {
-  const now = Date.now();
+  const now   = Date.now();
   const entry = rateLimitMap.get(ip);
 
   if (!entry || now - entry.start > RATE_LIMIT_WINDOW) {
@@ -56,7 +53,7 @@ function isRateLimited(ip) {
   return entry.count > RATE_LIMIT_MAX;
 }
 
-// Nettoyage périodique de la map (toutes les 5 min)
+// Periodic cleanup every 5 min
 setInterval(() => {
   const now = Date.now();
   for (const [ip, entry] of rateLimitMap.entries()) {
@@ -126,7 +123,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`✅ School Mode News Server démarré sur le port ${PORT}`);
-  console.log(`   /news   → ${NEWS.length} articles`);
+  console.log(`✅ School Mode News Server running on port ${PORT}`);
+  console.log(`   /news   → ${NEWS.length} article(s)`);
   console.log(`   /health → status check`);
 });

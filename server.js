@@ -6,36 +6,41 @@ const http = require('http');
 const NEWS = [
   {
     id: 1,
-    category: 'tip',
-    title: 'Hey what do you think ?',
-    content: "hey what do you think of school mode ? you like it ? want improvments ? you can just put a comment on the chrome web store and there is even beter for supporting us you can tip us kofi ! Thank you for all of that support because school mode is a tool for students by students so consider tiping (spoiler alert : at 5 euros there will be an mobile app).",
-    date: '2025-04-01'
+    category: "tip",
+    title: "Hey what do you think ?",
+    date: "2025-04-01",
+    content: `hey what do you think of school mode ? you like it ? want improvments ? you can just put a comment on the chrome web store and there is even beter for supporting us you can tip us kofi ! Thank you for all of that support because school mode is a tool for students by students so consider tiping (spoiler alert : at 5 euros there will be an mobile app).`
   },
   {
     id: 2,
-    category: 'update',
-    title: 'School Mode v5.3 released!',
-    content: [
-      '✨ What\'s New',
-      '• 8 profile themes — Purple, Forest, Sunset, Ocean, Cherry, Midnight, Candy, Arctic',
-      '• News feed — Built-in news client with local cache fallback',
-      '• Import / Export — Floating button with profile preview before import',
-      '• Changelog modal — "What\'s new" button directly in options',
-      '',
-      '🛠 Improvements',
-      '• Unsaved changes bar with Cancel / Save actions',
-      '• Real-time site counter in options',
-      '• Cleaner auto-disable: removes all DNR rules + unmutes and reloads blocked tabs',
-      '• debounce on inputs to prevent unnecessary saves',
-      '',
-      '🐛 Bug Fixes',
-      '• Service Worker timers lost on suspension → migrated to chrome.alarms',
-      '• Blocked tabs not reloaded on disable → auto-reload after 500ms',
-      '',
-      '⚠️ Migration note — Existing profiles without a theme will default to purple!'
-    ].join('\n'),
-    date: '2025-03-29'
+    category: "update",
+    title: "School Mode v5.3 released!",
+    date: "2025-03-29",
+    content: `✨ What's New
+• 8 profile themes — Purple, Forest, Sunset, Ocean, Cherry, Midnight, Candy, Arctic
+• News feed — Built-in news client with local cache fallback
+• Import / Export — Floating button with profile preview before import
+• Changelog modal — "What's new" button directly in options
+
+🛠 Improvements
+• Unsaved changes bar with Cancel / Save actions
+• Real-time site counter in options
+• Cleaner auto-disable: removes all DNR rules + unmutes and reloads blocked tabs
+• debounce on inputs to prevent unnecessary saves
+
+🐛 Bug Fixes
+• Service Worker timers lost on suspension → migrated to chrome.alarms
+• Blocked tabs not reloaded on disable → auto-reload after 500ms
+
+⚠️ Migration note — Existing profiles without a theme will default to purple!`
   },
+  {
+    id: 1,
+    category: "announcement",
+    title: "test",
+    date: "2026-04-01",
+    content: `test`
+  }
 ];
 
 // =====================================================================

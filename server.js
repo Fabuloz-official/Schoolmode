@@ -4,6 +4,12 @@ const http = require('http');
 //  📰 NEWS — edit this section to update news
 // =====================================================================
 const NEWS = [
+      id: 1,
+    category: 'tip',
+    title: 'Hey what do you think ?',
+    content: ["hey what do you think of school mode ? you like it ? want improvments ? you can just put a comment on the chrome web store and there is even beter for supporting us you can tip us kofi ! Thank you for all of that support because school mode is a tool for students by students so consider tiping (spoiler alert : at 5 euros there will be an mobile app)."
+    date: '2025-04-01'
+  }
   {
     id: 1,
     category: 'update',
@@ -28,7 +34,7 @@ const NEWS = [
       '⚠️ Migration note — Existing profiles without a theme will default to purple!'
     ].join('\n'),
     date: '2025-03-29'
-  }
+  },
 ];
 
 // =====================================================================

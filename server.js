@@ -4,6 +4,36 @@ const http = require('http');
 //  📰 NEWS — edit this section to update news
 // =====================================================================
 const NEWS = [
+    {
+    id: 1,
+    category: "alert",
+    title: "Thank you so much",
+    date: "2025-05-13",
+    content: `Thank you for all of that support please don't forget to tell if the is bugs or any idea you wanna add don't forget to put a note on the chrome webstore an to recommend it to your frinds !!!).`
+  },
+  {
+    id: 2,
+    category: "update",
+    title: "School Mode v5.3 released!",
+    date: "2025-03-29",
+    content: `✨ What's New
+• 8 profile themes — Purple, Forest, Sunset, Ocean, Cherry, Midnight, Candy, Arctic
+• News feed — Built-in news client with local cache fallback
+• Import / Export — Floating button with profile preview before import
+• Changelog modal — "What's new" button directly in options
+
+🛠 Improvements
+• Unsaved changes bar with Cancel / Save actions
+• Real-time site counter in options
+• Cleaner auto-disable: removes all DNR rules + unmutes and reloads blocked tabs
+• debounce on inputs to prevent unnecessary saves
+
+🐛 Bug Fixes
+• Service Worker timers lost on suspension → migrated to chrome.alarms
+• Blocked tabs not reloaded on disable → auto-reload after 500ms
+
+⚠️ Migration note — Existing profiles without a theme will default to purple!`
+  },
   {
     id: 1,
     category: "tip",

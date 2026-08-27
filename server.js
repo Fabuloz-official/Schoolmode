@@ -67,9 +67,9 @@ const NEWS = [
   {
     id: 1,
     category: "announcement",
-    title: "test",
+    title: "Hello new york city !",
     date: "2026-04-01",
-    content: `test`
+    content: `The info page is now up to date want improvement let a comment ! AND THANK YOU SO MUCH`
   }
 ];
 
